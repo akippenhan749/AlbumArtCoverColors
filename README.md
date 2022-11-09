@@ -88,7 +88,7 @@ uri | string | The Spotify URI for the track. | "spotify:track:2yE3bwbhqypdsuhmv
 | url | string | The source URL of the image. | "https://i.scdn.co/image/ab67616d0000b273466cbdbfa0f61e469beca2a1" |
 | width | integer | The image width in pixels. | 640 |
 
-##### `artists `
+##### `artists`
 
 | Value | Data Type | Description | Example |
 |-------|-----------|-------------|---------|
@@ -97,7 +97,7 @@ uri | string | The Spotify URI for the track. | "spotify:track:2yE3bwbhqypdsuhmv
 | id | string | The Spotify ID for the artist. | "2bt3I0VkmYuPvP57sxokab" |
 | name | string | The name of the artist. | "Stiff Little Fingers" |
 | type | string | The object type. | "artist" |
-| uri | string | The Spotify URI for the artist. | "spotify:artist:2bt3I0VkmYuPvP57sxokab" |
+| uri | string | The Spotify URI for the artist. | "spotify:<zero-width space>artist:2bt3I0VkmYuPvP57sxokab" |
 
 ##### Example of `available_markets` Array
 
