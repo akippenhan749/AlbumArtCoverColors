@@ -29,7 +29,7 @@ This project makes use of the following Python modules:
 
 ## Data
 
-The data for this project was collected using the Spotify API. Data for 6 different genres was collected using Python. For each genre, 20 queries were made with each containing 50 records to reach Spotify's maximum limit of 1000 records. The results from the API requests are in JSON format in the directory corresponding to the genre name in the `data` folder of this repository. The 3184 total album art images that were downloaded from these request responses can be found in the `images` folder of each genre in the `data` folder of this repository. The number of images varies for each genre as many of the image URLS provide in the request responses were duplicates. A list of the collected genres and their corresponding JSON data file can be found below. Note that the data for this project was collected using the Spotify API, which requires a Spotify developer account.
+The data for this project was collected using the Spotify API. Data for 6 different genres was collected using Python. For each genre, 20 queries were made with each containing 50 records to reach Spotify's maximum limit of 1000 records. The results from the API requests are in JSON format in the folder corresponding to the genre name in the `data` folder of this repository. The 3184 total album art images that were downloaded from these request responses can be found in the `images` folder of each genre in the `data` folder of this repository. The number of images varies for each genre as many of the image URLS provided in the request responses were duplicates. A list of the collected genres and their corresponding JSON data file can be found below. Note that the data for this project was collected using the Spotify API, which requires a Spotify developer account.
 
 - Alternative - `alternative.json` [(src)](data/alternative/alternative.json)
 - Country - `country.json` [(src)](data/country/country.json)
@@ -40,7 +40,7 @@ The data for this project was collected using the Spotify API. Data for 6 differ
 
 ### Data Dictionary
 
-There are several data dictionaries included here as some items are arrays. The first data dictionary is key labeled `items` in each JSON data file (labeled and each consecutive data dictionary is for each array included in the first data dictionary. For each array corresponding to a separate data dictionary, the Example column includes a link to that data dictionary in this README. An example for the `available_markets` value is included separately below the data dictionaries to preserve table formatting and can be accessed via the link in the Example column. 
+There are several data dictionaries included here as some items in the JSON data are arrays. The first data dictionary is for the key labeled `items` in each JSON data file and the next are for each array included in the first data dictionary. For each array corresponding to a separate data dictionary, the Example column includes a link to that data dictionary in this README. Additionally, an example for the `available_markets` value is included separately below the data dictionaries to preserve table formatting and can be accessed via the link in the Example column of the corresponding data dictionary.
 
 | Value | Data Type | Description | Example |
 |-------|-----------|-------------|---------|
