@@ -22,6 +22,10 @@ This project makes use of the following Python modules:
 - `requests` - to make API requests to the Spotify API and download images
 - `subprocess` - to run shell script to generate API token
 - `time` - to record code execution time
+- `ColorThief` - to record predominant color 
+- `matplotlib.pyplot` - to create visuals
+- `webcolors` - to convert RGB values to colors
+- `glob` - to read image files across desktop folder
 
 ### Usage of Code in this Repository
 
