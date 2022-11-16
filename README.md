@@ -37,7 +37,7 @@ The file `PredominantColorVisual.py` ([src](src/PredominantColorVisual.py)) read
 
 #### Modeling
 
-The file `Project 3 code.R` ([src](src/Project 3 code.R)) contains the R script to import the images, and subsequently train, test, and evaluate the convolutional neural network (CNN) for predicting genre based on album cover.
+The file `cnnModeling.R` ([src](src/cnnModeling.R)) contains the R script to import the images, and subsequently train, test and evaluate the convolutional neural network (CNN) for predicting genre based on album cover.
 
 ## Data
 
