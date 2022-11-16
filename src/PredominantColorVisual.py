@@ -1,8 +1,3 @@
-import requests
-import pandas as pd
-import csv
-import json
-import os
 from colorthief import ColorThief
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
