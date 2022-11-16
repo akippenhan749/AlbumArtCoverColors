@@ -29,7 +29,7 @@ This project makes use of the following Python modules:
 
 ### Usage of Code in this Repository
 
-(This section is currently empty). The file `PredominantColorVisual.py` ([src](src/PredominantColorVisual.py)) reads certain images into Python, finds the predomiant color of the image, and subsequently visualizes the RGB values and colors across the different genres. 
+The files, `getApiToken.sh` ([src](src/getApiToken.sh)) and `getAlbumArtImages.py` ([src](src/getAlbumArtImages.py)) [...]. The file `PredominantColorVisual.py` ([src](src/PredominantColorVisual.py)) reads certain images into Python, finds the predomiant color of the image, and subsequently visualizes the RGB values and colors across the different genres. 
 
 ## Data
 
