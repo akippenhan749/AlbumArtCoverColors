@@ -1,7 +1,5 @@
 # Album Art Cover Colors and Genre
 
-(This project is a work in progress and as such this repository is not complete)
-
 ## Repository Contents
 
 This repository contains code, data and figures for a data science project investigating colors in album art covers and their relation to different genres. This project was created as part of the Data Science Project Course (DS 4002) at the University of Virginia in the Fall of 2022.
@@ -17,30 +15,38 @@ After cloning or forking this repository, its contents can be used to recreate d
 #### Python Modules
 
 This project makes use of the following Python modules:
-- `PIL.Image` - to write album art images to files
+- `colorthief` - to record predominant color
+- `glob` - to read image files across desktop folder
 - `json` - to manage json data files
+- `matplotlib.pyplot` - to create visuals
+- `PIL.Image` - to write album art images to files
 - `requests` - to make API requests to the Spotify API and download images
 - `subprocess` - to run shell script to generate API token
 - `time` - to record code execution time
-- `ColorThief` - to record predominant color 
-- `matplotlib.pyplot` - to create visuals
 - `webcolors` - to convert RGB values to colors
-- `glob` - to read image files across desktop folder
 
 ### Usage of Code in this Repository
 
-The files, `getApiToken.sh` ([src](src/getApiToken.sh)) and `getAlbumArtImages.py` ([src](src/getAlbumArtImages.py)) [...]. The file `PredominantColorVisual.py` ([src](src/PredominantColorVisual.py)) reads certain images into Python, finds the predomiant color of the image, and subsequently visualizes the RGB values and colors across the different genres. 
+#### Data Collection
+
+The main file for the code used to collect the data for this project is located in `getAlbumArtImages.py` ([src](src/getAlbumArtImages.py)). The code first runs the bash shell script `getApiToken.sh` ([src](src/getApiToken.sh)) to get the Spotify API authentication token before making the API queries necessary to collect the JSON containing links to the album art images. It then iterates through the JSON data and downloads every unique album art image for each genre from the relevant link, placing each image in the folder corresponding to its genre.
+
+#### Exploratory Data Analysis
+
+The file `PredominantColorVisual.py` ([src](src/PredominantColorVisual.py)) reads certain images into Python, finds the predominant color of the image and subsequently visualizes the RGB values and colors for the different genres in three-dimensional scatterplots.
+
+#### Modeling
 
 ## Data
 
 The data for this project was collected using the Spotify API. Data for 6 different genres was collected using Python. For each genre, 20 queries were made with each containing 50 records to reach Spotify's maximum limit of 1000 records. The results from the API requests are in JSON format in the folder corresponding to the genre name in the `data` folder of this repository. The 3184 total album art images that were downloaded from these request responses can be found in the `images` folder of each genre in the `data` folder of this repository. The number of images varies for each genre as many of the image URLS provided in the request responses were duplicates. A list of the collected genres and their corresponding JSON data file can be found below. Note that the data for this project was collected using the Spotify API, which requires a Spotify developer account.
 
-- Alternative - `alternative.json` [(src)](data/alternative/alternative.json)
-- Country - `country.json` [(src)](data/country/country.json)
-- Hip-hop - `hip-hop.json` [(src)](data/hip-hop/hip-hop.json)
-- Jazz - `jazz.json` [(src)](data/jazz/jazz.json)
-- Pop - `pop.json` [(src)](data/pop/pop.json)
-- Rock - `rock.json` [(src)](data/rock/rock.json)
+- Alternative - `alternative.json` ([src](data/alternative/alternative.json))
+- Country - `country.json` ([src](data/country/country.json))
+- Hip-hop - `hip-hop.json` ([src](data/hip-hop/hip-hop.json))
+- Jazz - `jazz.json` ([src](data/jazz/jazz.json))
+- Pop - `pop.json` ([src](data/pop/pop.json))
+- Rock - `rock.json` ([src](data/rock/rock.json))
 
 ### Data Dictionary
 
@@ -121,8 +127,27 @@ Figures for this project can be found in the `figures` folder of this repository
 
 | Figure Name | Variables | Summary |
 |-------------|-----------|---------|
+| Alternative 3D Scatterplot ([src](figures/alternativeScatterplot.jpg)) | x = R, y = G, z = B | A three-dimensional scatterplot showing the predominant color distribution of select album art images in the alternative genre. The three axes represent the color values red, green and blue. |
+| Country 3D Scatterplot ([src](figures/countryScatterplot.jpg)) | x = R, y = G, z = B | A three-dimensional scatterplot showing the predominant color distribution of select album art images in the country genre. The three axes represent the color values red, green and blue. |
+| Jazz 3D Scatterplot ([src](figures/jazzScatterplot.jpg)) | x = R, y = G, z = B | A three-dimensional scatterplot showing the predominant color distribution of select album art images in the jazz genre. The three axes represent the color values red, green and blue. |
+| Hip-Hop 3D Scatterplot ([src](figures/hip-hopScatterplot.jpg)) | x = R, y = G, z = B | A three-dimensional scatterplot showing the predominant color distribution of select album art images in the hip-hop genre. The three axes represent the color values red, green and blue. |
+| Pop 3D Scatterplot ([src](figures/popScatterplot.jpg)) | x = R, y = G, z = B | A three-dimensional scatterplot showing the predominant color distribution of select album art images in the pop genre. The three axes represent the color values red, green and blue. |
+| Rock 3D Scatterplot ([src](figures/rockScatterplot.jpg)) | x = R, y = G, z = B | A three-dimensional scatterplot showing the predominant color distribution of select album art images in the rock genre. The three axes represent the color values red, green and blue. |
 
 ## References
 
+[1]	E. Pereira, “Judge an Album by its Colours,” AlbumCoverZone, Oct. 28, 2020. [Online]. Available: https://albumcoverzone.com/blog/judge-an-album-by-its-colour. [Accessed Nov. 2, 2022].
+
+[2]	B. Milano, “Can You Judge An Album By Its Cover? How Artwork Reflects The Music,” UDiscoveryMusic. Sept. 20, 2022. [Online]. Available: https://www.udiscovermusic.com/stories/can-you-judge-an-album-by-its-cover/. [Accessed Nov. 2, 2022].
+
+[3]	G. Smith, “Why is Every Music Poster Orange and Blue,” OBSEV. [Online]. Available: https://www.obsev.com/entertainment/orange-and-blue-movie-posters/. [Accessed Nov. 2, 2022].
+
+[4]	G. Barney and K. Kaya, “Predicting Genre from Movie Posters,” Stanford University. [Online]. Available: https://cs229.stanford.edu/proj2019spr/report/9.pdf. [Accessed Nov. 2, 2022].
+
+[5]	R. Chokshi and S. Sung, “Classification of Movie Posters to Movie Genres,” Stanford University. [Online]. Available: http://cs230.stanford.edu/projects_winter_2020/reports/32643471.pdf. [Accessed Nov. 2, 2022].
+
+[6]	L. Dhakar, “Color Thief,” Color thief. [Online]. Available: https://lokeshdhakar.com/projects/color-thief/. [Accessed: Nov. 9, 2022].
+
+[7] F. Lima, "Convolutional Neural Networks in R," R-bloggers. [Online]. Available: https://www.r-bloggers.com/2018/07/convolutional-neural-networks-in-r/. [Accessed: Nov 16, 2022].
 
 Files documenting the previous 2 milestones of this project can be found in the `milestones` folder of this repository in `M1Hypothesis.pdf` ([src](milestones/MI1Hypothesis.pdf)) and `MI2EstablishDataAndAnalysisPlan.pdf` ([src](milestones/MI2EstablishDataAndAnalysisPlan.pdf)).
