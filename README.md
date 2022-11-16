@@ -37,6 +37,8 @@ The file `PredominantColorVisual.py` ([src](src/PredominantColorVisual.py)) read
 
 #### Modeling
 
+The file `Project 3 code.R` ([src](src/Project 3 code.R)) contains the R script to import the images, and subsequently train, test, and evaluate the convolutional neural network (CNN) for predicting genre based on album cover.
+
 ## Data
 
 The data for this project was collected using the Spotify API. Data for 6 different genres was collected using Python. For each genre, 20 queries were made with each containing 50 records to reach Spotify's maximum limit of 1000 records. The results from the API requests are in JSON format in the folder corresponding to the genre name in the `data` folder of this repository. The 3184 total album art images that were downloaded from these request responses can be found in the `images` folder of each genre in the `data` folder of this repository. The number of images varies for each genre as many of the image URLS provided in the request responses were duplicates. A list of the collected genres and their corresponding JSON data file can be found below. Note that the data for this project was collected using the Spotify API, which requires a Spotify developer account.
