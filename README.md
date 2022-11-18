@@ -152,4 +152,6 @@ Figures for this project can be found in the `figures` folder of this repository
 
 [7] F. Lima, "Convolutional Neural Networks in R," R-bloggers. [Online]. Available: https://www.r-bloggers.com/2018/07/convolutional-neural-networks-in-r/. [Accessed: Nov. 16, 2022].
 
+##
+
 Files documenting the previous 2 milestones of this project can be found in the `milestones` folder of this repository in `M1Hypothesis.pdf` ([src](milestones/MI1Hypothesis.pdf)) and `MI2EstablishDataAndAnalysisPlan.pdf` ([src](milestones/MI2EstablishDataAndAnalysisPlan.pdf)).
