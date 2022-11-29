@@ -2,7 +2,7 @@
 
 ## Repository Contents
 
-This repository contains code, data and figures for a data science project investigating colors in album art covers and their relation to different genres. This project was created as part of the Data Science Project Course (DS 4002) at the University of Virginia in the Fall of 2022.
+This repository contains code, data and figures for a data science project investigating colors in album art covers and their relation to different genres using a convolutional neural network (CNN) machine learning model. This project was created as part of the Data Science Project Course (DS 4002) at the University of Virginia in the Fall of 2022.
 
 ## Source Code
 
@@ -15,29 +15,35 @@ After cloning or forking this repository, its contents can be used to recreate d
 #### Python Modules
 
 This project makes use of the following Python modules:
-- `colorthief` - to record predominant color
+- `colorthief` - to record predominant color of an image
 - `glob` - to read image files across desktop folder
 - `json` - to manage json data files
+- `keras` - to create the CNN model
 - `matplotlib.pyplot` - to create visuals
+- `numpy` - to arrange data for modeling prediction
+- `pandas` - to manipulate data
 - `PIL.Image` - to write album art images to files
 - `requests` - to make API requests to the Spotify API and download images
+- `sklearn` - to split data for modeling
 - `subprocess` - to run shell script to generate API token
+- `tensorflow` - to access the keras API
 - `time` - to record code execution time
+- `tqdm` - to assist data arrangement for modeling
 - `webcolors` - to convert RGB values to colors
 
 ### Usage of Code in this Repository
 
 #### Data Collection
 
-The main file for the code used to collect the data for this project is located in `getAlbumArtImages.py` ([src](src/getAlbumArtImages.py)). The code first runs the bash shell script `getApiToken.sh` ([src](src/getApiToken.sh)) to get the Spotify API authentication token before making the API queries necessary to collect the JSON containing links to the album art images. It then iterates through the JSON data and downloads every unique album art image for each genre from the relevant link, placing each image in the folder corresponding to its genre.
+The main file for the code used to collect the data for this project is located in `getAlbumArtImages.py` ([src](src/dataCollection/getAlbumArtImages.py)). The code first runs the bash shell script `getApiToken.sh` ([src](src/dataCollection/getApiToken.sh)) to get the Spotify API authentication token before making the API queries necessary to collect the JSON containing links to the album art images. It then iterates through the JSON data and downloads every unique album art image for each genre from the relevant link, placing each image in the folder corresponding to its genre.
 
 #### Exploratory Data Analysis
 
-The file `PredominantColorVisual.py` ([src](src/PredominantColorVisual.py)) reads certain images into Python, finds the predominant color of the image and subsequently visualizes the RGB values and colors for the different genres in three-dimensional scatterplots.
+The file `predominantColorVisual.py` ([src](src/exploratoryDataAnalysis/predominantColorVisual.py)) reads certain images into Python, finds the predominant color of the image and subsequently visualizes the RGB values and colors for the different genres in three-dimensional scatterplots.
 
 #### Modeling
 
-The file `cnnModeling.R` ([src](src/cnnModeling.R)) contains the R script to import the images, and subsequently train, test and evaluate the convolutional neural network (CNN) for predicting genre based on album cover.
+The code contained in `dataClassification.py` ([src](src/modeling/dataClassification.py)) classifies the images into each genre and splits the data into training and testing datasets to use for the CNN model. Testing of the model with the test dataset is then performed in `testModel.ipynb` ([src](src/modeling/testModel.ipynb)) and training using the training dataset is done in `trainModel.ipynb` ([src](src/modeling/trainModel.ipynb)).
 
 ## Data
 
