@@ -129,6 +129,7 @@ Figures for this project can be found in the `figures` folder of this repository
 
 | Figure Name | Variables | Summary |
 |-------------|-----------|---------|
+| Accuracy Bar Graph ([src] (figures/Accuracy Plot.png)) | x = Genre, y = Test Accuracy | A two-dimensional bar graph showing the test accuracy of the CNN model by genre. |
 | Alternative 3D Scatterplot ([src](figures/alternativeScatterplot.jpg)) | x = R, y = G, z = B | A three-dimensional scatterplot showing the predominant color distribution of select album art images in the alternative genre. The three axes represent the color values red, green and blue. |
 | Country 3D Scatterplot ([src](figures/countryScatterplot.jpg)) | x = R, y = G, z = B | A three-dimensional scatterplot showing the predominant color distribution of select album art images in the country genre. The three axes represent the color values red, green and blue. |
 | Jazz 3D Scatterplot ([src](figures/jazzScatterplot.jpg)) | x = R, y = G, z = B | A three-dimensional scatterplot showing the predominant color distribution of select album art images in the jazz genre. The three axes represent the color values red, green and blue. |
