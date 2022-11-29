@@ -118,3 +118,23 @@ history % fit(
 )
 
 plot(history)
+
+
+## accuracy by genre
+# Pop: 11.9%
+# Hip-Hop:  31.8%
+# Country: 29.2%
+# Jazz: 12.5%
+# Rock: 61.7%
+# Alternative: 5.2%
+
+# creating a data frame
+df <- data.frame(genre  = c("Pop", "Hip-Hop", "Country", "Jazz", "Rock", "Alternative"),
+                  accuracy = c(11.9, 31.8, 29.2, 12.5, 61.7, 5.2))
+
+library(ggplot2)
+
+ggplot(df,aes(x=genre, y = accuracy)) + geom_bar(stat="identity", fill="steelblue") +
+  geom_text(aes(label=accuracy), vjust=1.6, color="white", size=5) +  theme_minimal() +
+  labs(y = "Test Accuracy %", x = "Genre of Music", title = "Accuracy of CNN Model by Genre")
+
