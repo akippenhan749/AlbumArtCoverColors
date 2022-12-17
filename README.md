@@ -84,7 +84,7 @@ uri | string | The Spotify URI for the track. | "spotify:track:2yE3bwbhqypdsuhmv
 
 | Value | Data Type | Description | Example |
 |-------|-----------|-------------|---------|
-| album_type | The type of album. Allowed values: "album", "single", "compilation". | "album" |
+| album_type | string | The type of album. Allowed values: "album", "single", "compilation". | "album" |
 | artists | array of objects | The artists of the album. | see [artists section](#artists) |
 | available_markets | array of strings | The markets in which the album is available: ISO 3166-1 alpha-2 country codes. NOTE: an album is considered available in a market when at least 1 of its tracks is available in that market. | see [example of available_markets array](#example-of-available_markets-array) |
 | external_urls | object | Known external URLs for this album. | "spotify": "https://open.spotify.com/album/2uXYm7SqdQlOgrx2FEWlkD" |
